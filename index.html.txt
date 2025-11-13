@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hồ Sơ Cá Nhân - Đức Hồ</title>
+    <!-- Tải Tailwind CSS qua CDN cho styling hiện đại và responsive -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Cấu hình Font và Styling cơ bản -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        /* Styling cho các phần tử interactive (ví dụ: nút) */
+        .btn-primary {
+            @apply inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-xl shadow-lg transition duration-300 ease-in-out;
+        }
+        .text-gradient {
+            background-image: linear-gradient(to right, #6366f1, #3b82f6, #06b6d4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+        }
+        /* Đảm bảo khung nội dung không bị quá rộng trên desktop */
+        .container {
+            max-width: 1000px;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-gray-100">
+
+    <div id="app" class="container mx-auto p-4 sm:p-6 lg:p-8">
+
+        <!-- HEADER & NAVIGATION -->
+        <header class="flex justify-between items-center py-6 border-b border-gray-200 dark:border-gray-700">
+            <h1 class="text-3xl font-extrabold text-gradient">
+                Đức Hồ
+            </h1>
+            <button id="theme-toggle" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition" aria-label="Toggle dark mode">
+                <!-- Icon mặt trời/mặt trăng (Sử dụng SVG để không cần thư viện ngoài) -->
+                <svg id="sun-icon" class="w-6 h-6 text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+                <svg id="moon-icon" class="w-6 h-6 text-blue-400 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
+            </button>
+        </header>
+        <!-- END HEADER -->
+
+        <!-- HERO SECTION: GIỚI THIỆU CHÍNH -->
+        <section class="text-center py-16 sm:py-20 lg:py-24 space-y-6">
+            <!-- PROFILE IMAGE PLACEHOLDER -->
+            <img src="https://placehold.co/160x160/4f46e5/ffffff?text=Đức+Hồ" 
+                 alt="Ảnh đại diện Đức Hồ" 
+                 class="w-40 h-40 rounded-full mx-auto object-cover shadow-xl border-4 border-white dark:border-gray-800 transition duration-300">
+            
+            <h2 class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-tight pt-4">
+                Đức Hồ
+            </h2>
+            <p class="text-xl sm:text-2xl font-medium text-indigo-500 dark:text-indigo-400">
+                Front-end Developer | Sẵn sàng Khởi nghiệp
+            </p>
+            
+            <!-- SOCIAL LINKS BAR: Các ô liên kết -->
+            <div class="flex justify-center space-x-3 sm:space-x-4 pt-4 pb-8">
+                <!-- 1. GitHub (NHỚ CẬP NHẬT LINK) -->
+                <a href="https://github.com/your-github-username" target="_blank" class="p-3 sm:p-4 bg-gray-200 dark:bg-gray-700 rounded-full hover:bg-gray-300 dark:hover:bg-gray-600 transition duration-300 shadow-md" title="GitHub - Mã nguồn & Dự án">
+                    <span class="text-2xl sm:text-3xl" role="img" aria-label="GitHub">🐙</span>
+                </a>
+                <!-- 2. Facebook (NHỚ CẬP NHẬT LINK) -->
+                <a href="https://facebook.com/your-facebook-profile" target="_blank" class="p-3 sm:p-4 bg-gray-200 dark:bg-gray-700 rounded-full hover:bg-blue-600 hover:text-white transition duration-300 shadow-md" title="Facebook - Kết nối cá nhân">
+                    <span class="text-2xl sm:text-3xl" role="img" aria-label="Facebook">📘</span>
+                </a>
+                <!-- 3. YouTube (NHỚ CẬP NHẬT LINK) -->
+                <a href="https://youtube.com/your-youtube-channel" target="_blank" class="p-3 sm:p-4 bg-gray-200 dark:bg-gray-700 rounded-full hover:bg-red-600 hover:text-white transition duration-300 shadow-md" title="YouTube - Kênh Video/Hướng dẫn">
+                    <span class="text-2xl sm:text-3xl" role="img" aria-label="YouTube">▶️</span>
+                </a>
+                <!-- 4. TikTok (NHỚ CẬP NHẬT LINK) -->
+                <a href="https://tiktok.com/@your-tiktok-handle" target="_blank" class="p-3 sm:p-4 bg-gray-200 dark:bg-gray-700 rounded-full hover:bg-black hover:text-white transition duration-300 shadow-md" title="TikTok - Nội dung ngắn/Giải trí">
+                    <span class="text-2xl sm:text-3xl" role="img" aria-label="TikTok">🎵</span>
+                </a>
+                <!-- 5. LinkedIn (NHỚ CẬP NHẬT LINK) -->
+                <a href="https://linkedin.com/in/your-linkedin-profile" target="_blank" class="p-3 sm:p-4 bg-gray-200 dark:bg-gray-700 rounded-full hover:bg-blue-800 hover:text-white transition duration-300 shadow-md" title="LinkedIn - Mạng lưới công việc">
+                    <span class="text-2xl sm:text-3xl" role="img" aria-label="LinkedIn">🔗</span>
+                </a>
+                <!-- 6. Cửa hàng (Shop/E-commerce) (NHỚ CẬP NHẬT LINK) -->
+                <a href="https://your-shop-link.com" target="_blank" class="p-3 sm:p-4 bg-gray-200 dark:bg-gray-700 rounded-full hover:bg-green-600 hover:text-white transition duration-300 shadow-md" title="Cửa hàng - Dự án kinh doanh">
+                    <span class="text-2xl sm:text-3xl" role="img" aria-label="Shop">🛒</span>
+                </a>
+            </div>
+            <!-- END SOCIAL LINKS BAR -->
+            
+            <p class="max-w-3xl mx-auto text-lg text-gray-600 dark:text-gray-400">
+                Chào mừng đến với trang hồ sơ cá nhân của tôi. Tôi là Đức Hồ, một người đam mê công nghệ và đang tìm kiếm cơ hội để ứng dụng kiến thức lập trình vào các dự án thực tế.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6 pt-4">
+                <a href="#contact-form" class="btn-primary bg-indigo-600 text-white hover:bg-indigo-700 shadow-indigo-500/50">
+                    Gửi Lời Nhắn Cho Tôi
+                </a>
+                <a href="#" download class="btn-primary bg-gray-200 text-gray-800 hover:bg-gray-300 dark:bg-gray-700 dark:text-gray-200 dark:hover:bg-gray-600 shadow-gray-400/50">
+                    Tải CV (PDF)
+                </a>
+            </div>
+        </section>
+        <!-- END HERO SECTION -->
+
+        <!-- SKILLS SECTION: KỸ NĂNG CỐT LÕI -->
+        <section id="skills" class="py-12 border-t border-gray-200 dark:border-gray-700">
+            <h3 class="text-3xl font-bold mb-8 text-center text-gradient">Kỹ Năng Cốt Lõi (Front-end Fresher)</h3>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                <!-- Skill 1: HTML5 & CSS3 -->
+                <div class="p-6 bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition duration-300">
+                    <span class="text-5xl" role="img" aria-label="HTML icon">🛠️</span>
+                    <h4 class="mt-4 text-xl font-semibold">HTML5 & CSS3</h4>
+                    <p class="text-sm text-gray-500 dark:text-gray-400">Vững cấu trúc, Responsive Design (Tailwind, Flexbox, Grid).</p>
+                </div>
+                <!-- Skill 2: JavaScript (Vanilla JS) -->
+                <div class="p-6 bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition duration-300">
+                    <span class="text-5xl" role="img" aria-label="JS icon">🧠</span>
+                    <h4 class="mt-4 text-xl font-semibold">JavaScript (ES6+)</h4>
+                    <p class="text-sm text-gray-500 dark:text-gray-400">Xử lý DOM, logic cơ bản, phát triển ứng dụng đơn giản.</p>
+                </div>
+                <!-- Skill 3: Git & GitHub -->
+                <div class="p-6 bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition duration-300">
+                    <span class="text-5xl" role="img" aria-label="Git icon">🔗</span>
+                    <h4 class="mt-4 text-xl font-semibold">Git & GitHub/Vercel</h4>
+                    <p class="text-sm text-gray-500 dark:text-gray-400">Quản lý mã nguồn, quy trình CI/CD cơ bản (Triển khai tĩnh).</p>
+                </div>
+                <!-- Skill 4: Logic & Problem Solving -->
+                <div class="p-6 bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition duration-300">
+                    <span class="text-5xl" role="img" aria-label="Problem Solving icon">💡</span>
+                    <h4 class="mt-4 text-xl font-semibold">Tư Duy & Logic</h4>
+                    <p class="text-sm text-gray-500 dark:text-gray-400">Giải quyết vấn đề, học hỏi nhanh, theo đuổi sự bền vững.</p>
+                </div>
+            </div>
+        </section>
+        <!-- END SKILLS SECTION -->
+
+        <!-- CONTACT FORM SECTION: FORM LIÊN HỆ MỚI -->
+        <section id="contact-form" class="py-12 border-t border-gray-200 dark:border-gray-700">
+            <h3 class="text-3xl font-bold mb-8 text-center text-gradient">Gửi Lời Nhắn Đến Đức Hồ</h3>
+            <div class="max-w-2xl mx-auto p-6 bg-white dark:bg-gray-800 rounded-xl shadow-2xl">
+                <!-- 
+                    QUAN TRỌNG: Form này sử dụng dịch vụ Formspree (formspree.io) 
+                    để gửi dữ liệu qua email mà không cần viết code Back-end.
+                    Form action trỏ đến email của bạn: mailinh1942001@gmail.com
+                -->
+                <form action="https://formspree.io/f/mailinh1942001@gmail.com" method="POST" class="space-y-6">
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-gray-700 dark:text-gray-300">
+                            Tên của bạn
+                        </label>
+                        <input type="text" name="name" id="name" required
+                            class="mt-1 block w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg shadow-sm focus:ring-indigo-500 focus:border-indigo-500 dark:bg-gray-700 dark:text-white"
+                            placeholder="Ví dụ: Nguyễn Văn A">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700 dark:text-gray-300">
+                            Email Liên hệ (để tôi phản hồi)
+                        </label>
+                        <input type="email" name="_replyto" id="email" required
+                            class="mt-1 block w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg shadow-sm focus:ring-indigo-500 focus:border-indigo-500 dark:bg-gray-700 dark:text-white"
+                            placeholder="Ví dụ: ban@congty.com">
+                    </div>
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-gray-700 dark:text-gray-300">
+                            Nội dung / Ý kiến
+                        </label>
+                        <textarea name="message" id="message" rows="5" required
+                            class="mt-1 block w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg shadow-sm focus:ring-indigo-500 focus:border-indigo-500 dark:bg-gray-700 dark:text-white"
+                            placeholder="Bạn có ý tưởng khởi nghiệp? Có cơ hội hợp tác không? Hãy nhắn cho tôi."></textarea>
+                    </div>
+                    <div>
+                        <button type="submit" class="w-full btn-primary bg-indigo-600 text-white hover:bg-indigo-700 shadow-indigo-500/50">
+                            Gửi Tin Nhắn
+                        </button>
+                    </div>
+                </form>
+
+                <p class="text-center text-sm text-gray-500 dark:text-gray-400 mt-6">
+                    Thông tin sẽ được gửi đến email **mailinh1942001@gmail.com** qua dịch vụ Formspree.
+                    <span class="font-semibold text-red-500 dark:text-red-400">Hãy nhớ xác nhận form trong email lần đầu tiên gửi.</span>
+                </p>
+            </div>
+        </section>
+        <!-- END CONTACT FORM SECTION -->
+
+        <!-- FOOTER -->
+        <footer class="text-center py-6 border-t border-gray-200 dark:border-gray-700 mt-8">
+             <p class="text-gray-500 dark:text-gray-400">
+                Profile được xây dựng bằng **HTML, Tailwind CSS, và Vanilla JS** | Triển khai qua **GitHub + Vercel CD**.
+            </p>
+        </footer>
+        <!-- END FOOTER -->
+
+    </div>
+
+    <!-- JAVASCRIPT: LOGIC CHUYỂN ĐỔI THEME -->
+    <script>
+        // Lấy các phần tử DOM
+        const themeToggle = document.getElementById('theme-toggle');
+        const sunIcon = document.getElementById('sun-icon');
+        const moonIcon = document.getElementById('moon-icon');
+        const body = document.body;
+
+        // Hàm kiểm tra và thiết lập theme
+        function loadTheme() {
+            // Kiểm tra trong localStorage hoặc sử dụng preference của hệ thống
+            const isDarkMode = localStorage.getItem('theme') === 'dark' || 
+                                (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches);
+
+            if (isDarkMode) {
+                body.classList.add('dark');
+                sunIcon.classList.add('hidden');
+                moonIcon.classList.remove('hidden');
+            } else {
+                body.classList.remove('dark');
+                sunIcon.classList.remove('hidden');
+                moonIcon.classList.add('hidden');
+            }
+        }
+
+        // Hàm chuyển đổi theme khi nhấn nút
+        themeToggle.addEventListener('click', () => {
+            if (body.classList.contains('dark')) {
+                // Chuyển sang Light Mode
+                body.classList.remove('dark');
+                localStorage.setItem('theme', 'light');
+            } else {
+                // Chuyển sang Dark Mode
+                body.classList.add('dark');
+                localStorage.setItem('theme', 'dark');
+            }
+            // Cập nhật lại icon ngay lập tức
+            loadTheme();
+        });
+
+        // Tải theme khi trang được load
+        document.addEventListener('DOMContentLoaded', loadTheme);
+    </script>
+</body>
+</html>
